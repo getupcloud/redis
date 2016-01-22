@@ -93,3 +93,7 @@ parameters:
   name: REDIS_MAX_MEMORY_POLICY
   required: false
   value: "allkeys-lru"
+- description: Extra command line parameters to start redis
+  name: REDIS_EXTRA_PARAMETERS
+  required: false
+  value: "--maxclients 10000"
