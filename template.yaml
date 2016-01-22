@@ -54,6 +54,8 @@ objects:
             value: ${REDIS_MAX_MEMORY}
           - name: REDIS_MAX_MEMORY_POLICY
             value: ${REDIS_MAX_MEMORY_POLICY}
+          - name: REDIS_EXTRA_PARAMETERS
+            value: ${REDIS_EXTRA_PARAMETERS}
           image: redis
           imagePullPolicy: IfNotPresent
           name: redis
