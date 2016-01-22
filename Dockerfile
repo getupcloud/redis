@@ -20,7 +20,7 @@ RUN wget "$REDIS_DOWNLOAD_URL" -O redis.tar.gz && \
     make -C /usr/src/redis && \
     make -C /usr/src/redis install && \
     rm -r /usr/src/redis && \
-    mkdir /data && chown 1001 /data
+    mkdir /data
 
 EXPOSE 6379
 
