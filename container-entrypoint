@@ -1,7 +1,13 @@
 #!/bin/bash
 
+OPTIONS=""
+
+if [ ${REDIS_MAX_MEMORY} ]; then
+    OPTIONS=" --maxmemory $REDIS_MAX_MEMORY"
+fi
+
+
 set -eu
 cmd="$1"; shift
 
-exec $cmd "$@"
-
+exec $cmd "$@" $OPTIONS
