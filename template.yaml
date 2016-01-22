@@ -88,7 +88,7 @@ parameters:
 - description: Max memory Redis can use
   name: REDIS_MAX_MEMORY
   required: true
-  value: "409m"
+  value: "409MB"
 - description: How Redis will select what to remove when maxmemory is reached
   name: REDIS_MAX_MEMORY_POLICY
   required: false
