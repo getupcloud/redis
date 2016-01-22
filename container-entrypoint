@@ -1,17 +1,13 @@
 #!/bin/bash
 
-OPTIONS=""
+OPTIONS="$REDIS_EXTRA_PARAMETERS"
 
-if [ ${REDIS_MAX_MEMORY} ]; then
+if [ -n "${REDIS_MAX_MEMORY}" ]; then
     OPTIONS+=" --maxmemory $REDIS_MAX_MEMORY"
 fi
 
-if [ ${REDIS_MAX_MEMORY_POLICY} ]; then
+if [ -n "${REDIS_MAX_MEMORY_POLICY}" ]; then
     OPTIONS+=" --maxmemory-policy $REDIS_MAX_MEMORY_POLICY"
-fi
-
-if [ ${REDIS_EXTRA_PARAMETERS} ]; then
-    OPTIONS+=" $REDIS_EXTRA_PARAMETERS"
 fi
 
 set -eu
