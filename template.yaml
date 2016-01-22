@@ -34,8 +34,8 @@ objects:
   metadata:
     creationTimestamp: null
     name: ${REDIS_SERVICE_NAME}
-  labels:
-    name: ${REDIS_SERVICE_NAME}
+    labels:
+      name: ${REDIS_SERVICE_NAME}
   spec:
     replicas: 1
     selector:
