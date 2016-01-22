@@ -11,6 +11,7 @@ The following environment variables are available to configure your redis instan
 
 * REDIS_MAX_MEMORY: Max memory Redis can use
 * REDIS_MAX_MEMORY_POLICY: How Redis will select what to remove when maxmemory is reached
+* REDIS_EXTRA_PARAMETERS: Extra command line parameters to pass to command `redis-server`
 
 OpenShift
 ---------
