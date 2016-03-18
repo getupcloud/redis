@@ -1,12 +1,12 @@
 FROM openshift/base-centos7
 
-ENV REDIS_VERSION=3.0.6 \
+ENV REDIS_VERSION=3.0.7 \
     HOME=/ \
-    REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-3.0.6.tar.gz \
-    REDIS_DOWNLOAD_SHA1=4b1c7b1201984bca8f7f9c6c58862f6928cf0a25
+    REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-3.0.7.tar.gz \
+    REDIS_DOWNLOAD_SHA1=e56b4b7e033ae8dbf311f9191cf6fdf3ae974d1c
 
 LABEL io.k8s.description="Redis is an open source (BSD licensed), in-memory data structure store, used as database, cache and message broker." \
-      io.k8s.display-name="Redis 3.0.6" \
+      io.k8s.display-name="Redis 3.0.7" \
       io.openshift.expose-services="6379:redis" \
       io.openshift.tags="cache,nosql,redis"
 
