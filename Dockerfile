@@ -26,8 +26,4 @@ EXPOSE 6379
 
 USER 1001
 
-COPY container-entrypoint /usr/bin/
-
-ENTRYPOINT ["container-entrypoint"]
-
 CMD [ "redis-server" ]
