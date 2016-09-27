@@ -20,10 +20,15 @@ RUN wget "$REDIS_DOWNLOAD_URL" -O redis.tar.gz && \
     make -C /usr/src/redis && \
     make -C /usr/src/redis install && \
     rm -r /usr/src/redis && \
-    mkdir /data
+    mkdir -p /var/lib/redis/data && \
+    chmod g+w /var/lib/redis/data
+
+COPY container-entrypoint /usr/bin/
 
 EXPOSE 6379
 
 USER 1001
+
+ENTRYPOINT ["container-entrypoint"]
 
 CMD [ "redis-server" ]
