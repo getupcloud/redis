@@ -10,6 +10,16 @@ if [ -n "${REDIS_MAX_MEMORY_POLICY}" ]; then
     OPTIONS+=" --maxmemory-policy $REDIS_MAX_MEMORY_POLICY"
 fi
 
+if [ -n "${REDIS_DIR}" ]; then
+    mkdir -p "$REDIS_DIR"
+    chmod -R g+w "$REDIS_DIR"
+    OPTIONS+=" --dir $REDIS_DIR"
+fi
+
+if [ -n "${REDIS_DBFILENAME}" ]; then
+    OPTIONS+=" --dbfilename $REDIS_DBFILENAME"
+fi
+
 set -eu
 cmd="$1"; shift
 
